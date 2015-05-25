@@ -1,0 +1,46 @@
+#more-cases-studies > .container > .row {
+		font-size: 14px;
+		height: 100%;
+	}
+	.case-study-block-inner figure figcaption p {
+		margin-top: 0px;
+	}
+	.case-study-block-inner figure {
+		height: 150px;
+	}
+	h2.cta-btns.text-center {
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	#locations > #locations-container > .row > .col-xs-12 > h2 {
+		font-size: 35px;
+	}
+
+	/* customise navbar */
+	div.maincontent, div.navbar-header, div#main-header{
+		height: 37px;
+	}
+	div.container-fluid{
+		height: auto;
+	}
+	div#logo {
+		margin-top: -10px;
+	}
+	div#logo > a > img {
+		height: 25px;
+		width: 55px;
+	}
+	.navbar-toggle {
+		margin-top: 7px;
+	}
+	/* Adjust text */
+	div.container > .center-1 > .content1 > h1 {
+		font-size: 23px;
+	}
+	.center-1 > div > p > a {
+		font-size: 13px;
+	}
+	#intro-container > .row > .content2 > p, .content-block p, div.address p {
+		font-size: 11px;
+	}
+	

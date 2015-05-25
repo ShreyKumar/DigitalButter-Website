@@ -1,0 +1,31 @@
+.examplemodal {
+    width: 900px;
+    height: 550px;
+    line-height: 200px;
+    position: fixed;
+    top: 25%; 
+    left: 30%;
+    margin-top: -100px;
+    margin-left: -150px;
+    background-color: #FFF;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 11; /* 1px higher than the overlay layer */
+}
+div#window {
+    height: 500px;
+}
+
+.maincontent {
+    margin: 10px;
+}
+div#window > a.x {
+    color: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FEBF0E;
+    text-transform: uppercase;;
+    font-weight: bold;
+    text-align: center;
+}

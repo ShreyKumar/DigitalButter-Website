@@ -1,0 +1,853 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+/* CUSTOM CSS (ADD YOUR CSS HERE!) */
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*******
+for any text container use following to maintain precision:
+	width: 1300px;
+	margin-right:500px;
+	padding-left: 250px;
+********/
+/* PLUGIN CSS */
+@import url('../plugins/fancybox/fancybox-1.3.4.min.css');
+@import url('../plugins/fancybox/photoswipe-3.0.5.min.css');
+@import url('../plugins/hover-animations/hover-animations-1.0.min.css');
+@import url('../plugins/justinaguilar-animations/animations.css');
+@import url('../plugins/validation/validation-2.2.min.css');
+/* PAGE MODULES */
+body{
+	font-family: 'Merriweather', serif;
+	font-weight:300;
+	color: #005b95;
+	background: url('../img/psbg.png');
+	background: #fff;
+	
+	padding-right: 0;
+	padding-left: 0;
+	padding: 0px;
+	padding: 0px;
+}
+html {
+	margin-top: -20px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+
+h1, .h1{
+	padding-top: 0px;
+}
+h2, .h2{
+	padding-top: 0px;
+	padding-bottom: 15px;
+	font-size: 20px;
+}
+p {
+	padding: 0 0 15px;
+}
+
+#main-header{
+	background: #0072ba;
+}
+#main-header > .container > .row > .col-sm-10 {
+	padding-right: 0px;
+	margin-right: 0px;
+}
+#main-nav{
+	background: #005b95;
+}
+
+#toTop {
+	background: #febf0e;
+	z-index: 1000;
+	bottom: 0;
+	right: 5%; 
+}
+
+.copyright-block{
+	background: #febf0e; 
+	line-height:60px;
+	color:#333;
+}
+.copyright-block a{
+	color:#fff;
+}
+
+.copyright-block h6 a {
+	text-decoration: none;
+	border-bottom: 1px solid #333;
+	color: #333;
+	text-transform: uppercase;
+}
+
+#map{
+	height:400px;	
+}
+#footer-map{
+	height:250px;	
+}
+[class*="animate-"] .overlay {
+	background: #005995;
+}
+
+/* NAVIGATION */
+.navbar-nav>li>a {
+	font-family: 'Open Sans', sans-serif;
+	color:  #FFFFFF;
+	font-weight: 400; 
+	text-transform: uppercase;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+	color: #005b95;
+	background-color: #149cd7;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+	color: #005b95;
+	background-color: #149cd7;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+	color: #149cd7;
+}
+.navbar-default .navbar-nav>li>a{
+	color: #fff;
+}
+.navbar-default .navbar-toggle:hover .icon-bar{
+	background-color: #149cd7;
+}
+.container {
+	width: 100%;
+}
+
+.blurred {
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+#main-header {
+	background-color:  transparent;
+}
+
+#main-header .container {
+	background: #333333;
+}
+
+.btn {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.slider-block h1 {
+	color:  #ffffff;
+	font-weight: 700;
+}
+
+.btn-cta {
+	color:  #ffffff;
+	font-weight: 700;
+	border-bottom: 4px solid #ffffff;
+	text-transform: uppercase;
+}
+
+.btn-cta:hover {
+	color: #ffffff;
+}
+
+.btn-cta-inverse {
+	color:  #353835;
+	font-weight: 700;
+	border-bottom: 7px solid #353835;
+}
+
+.btn-cta-inverse:hover {
+	color: #353835;
+}
+
+#intro {
+
+}
+
+#intro-container {
+	background: #35bdb8;
+	padding: 1em 0; 
+} 
+
+#jobs .container {
+	background: #00a8d1;
+	color: white;
+}
+
+
+.btn-cta {
+	text-decoration: none !important;
+}
+#clients-container a, #jobs li a {
+	color: white;
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+#jobs a:hover, #clients-container a:hover, #jobs-container li a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+
+#intro-container {
+	color: #ffffff;
+}
+
+#intro-container a {
+	color: #353835;
+	text-decoration: none !important;
+	border-bottom: 1px solid #fff;
+}
+
+#intro-container a:hover {
+	border-bottom: 1px solid #353835;
+}
+
+#clients-container {
+	background: #353835;
+}
+
+#clients-container {
+	color: white;
+}
+
+.content-block p, .content-block li {
+	line-height: 1.5em;
+}
+
+
+
+#contact {
+	color: white;
+}
+
+#contact ::-webkit-input-placeholder {
+   color: white;
+}
+
+#contact :-moz-placeholder { /* Firefox 18- */
+   color: white;
+}
+
+#contact ::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+#contact :-ms-input-placeholder {  
+   color: white;
+}
+
+.form-control {
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid white;
+	box-shadow: 0;
+	-webkit-box-shadow: none;
+	color: white;
+}
+/* Navbar below */ 
+#main-header >  .navbar-header > ul {
+	height: 100%;
+}
+#logo {
+	display: inline-block;
+ 	position: relative;
+ 	vertical-align: middle; /* top | middle | bottom ... do what you want */
+}
+
+#logo .logo {
+	display: block;
+	top: 0;
+	left: 0;
+	position: absolute;
+	right: 15px;
+}
+#main-header > .container > .row .col-sm-10{
+	height: 70px;
+}
+#main-header > .container > .row .navbar {
+	height: 100%;
+}
+#main-header > .container > .row .navbar > ul {
+	height: 100%;
+}
+#main-header > .container > .row .navbar > ul > li {
+	width: 150px;
+	height: 100%;
+}
+#main-header > .container > .row .navbar > ul > li > a {
+	height: 100%;
+	padding-top: 25px;
+}
+#main-header > .container > .row .navbar > ul > li > a:hover {
+	background-color: #000;
+	color: #FFF;
+}
+
+/* customise popup*/
+#flap{
+	position: absolute;
+	top: 250px;
+	left: 250px;
+	padding: auto;
+	display: block;
+	background-color: white;
+	z-index: 1000;
+	width: 800px;
+	height: 900px;
+	border-radius: 10px;
+}
+div#flap .close {
+	top 0;
+	right 0;
+}
+.content-block > .container > .row {
+	height: 70px;
+}
+.content1{
+	padding-top: 20%;
+}
+#intro-container {
+	height: 100%;
+	position:relative;
+}
+#intro-container > .row > .content2 > p {
+	padding-top: 3%;
+	padding-left: 3%;
+}
+figure > img {
+	height: 100%;
+}
+.panel {
+	width: 50%;
+}
+.panel > img {
+	width: 100%;
+}
+figure > img {
+	width:100%;
+}
+
+#jobs > #jobs-container > .row > .content2 > .afters {
+	width: 100%;
+	margin-right:10%;
+	padding-left: 10%;
+}
+#jobs > #jobs-container > .row > .content2 > .afters > .jobs-block-inner{
+	padding-bottom: 110px;
+
+}
+#jobs-intro-container > .backstretch > img, #jobs-intro{
+	height: 350px;
+}
+#jobs-intro-container > .row{
+	padding-top: 240px;
+	padding-left: 10%;
+}
+#jobs-intro-container {
+	height: 100%;
+}
+#more-case-studies > .container > .row > p > a{
+	line-height: 10;
+	font-size: 18px;
+}
+#blogs {
+	height: 290px;
+}
+.blogs-block-inner {
+	margin-top:  70px;
+}
+#clients > #clients-container > .row > .col-xs-12 {
+	padding-right:5%;
+	padding-left: 10%;
+}
+#clients > #clients-container > .row > .col-xs-12 > h2 {
+	font-size: 30px;
+}
+#clients-container {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.center-1 > div > p > a {
+	margin-right: 10%;
+}
+.blogs-container {
+	height: 100%;
+}
+#more-cases-studies > .container > .row{
+	padding-top: 7%;
+	height: 110px;
+	font-size: 20px;
+}
+#locations {
+	height: 150px;
+}
+#locations > #locations-container > .row > .col-xs-12 {
+	text-align: center;
+	padding-top: 42px;
+}
+#locations > #locations-container > .row > .col-xs-12 > h2 {
+	font-size: 40px;
+}
+.row { 
+	margin-right: 0px;
+}
+#case-studies > #case-studies-container {
+	margin-right: -15px;
+	padding-right: 0px;
+}
+#case-studies > #case-studies-container > .row > .col-xs-12 {
+	padding-right: 0px;
+}	
+.panel-default {
+	height: 100%;
+	border: none;
+	border-radius: 0px;
+	margin-bottom: 0px;
+}				
+.panel-footer { 
+	background-color: #FFF;
+	border-top: none;
+}
+.panel-body {
+	height: 100%;
+	width: 100%;
+
+}
+.panel-footer { 
+	height: 189px;
+}
+#main-header > .container > .row > .col-sm-10 > ul > li > a:last-child  {
+	margin-right: 0px;
+}
+#jobs-intro-container > .row > .col-xs-12 > p > img {
+	width: 80%;
+	margin-right: 10%;
+}
+div#logo { 
+	margin-left: -7px;
+	height: 70px;
+	padding-top: 15px;
+}
+div.navbar-header {
+	height: 70px;
+}
+div.navbar-collapse > ul {
+	height: auto;
+	width: 100%;
+}
+div.navbar-collapse > ul > li{
+	height: 100%;
+	display: block;
+	width: 100%;
+}
+div.navbar-collapse > ul > li > a {
+	width: 25%;
+}
+div.navbar-collapse > ul > li.drop {
+	color: #000;
+	background-color: #000;
+}
+div.navbar-collapse > ul > li.drop > a {
+	outline-color: #000;
+	background-color: #000;
+}
+div.navbar-collapse > ul > li > a {
+	height: 100%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	width: 100%;
+}
+div.navbar-collapse > ul > li > a:hover {
+	background-color: black;
+	outline-width: 0px;
+}
+div.container-fluid {
+	padding: 0px;
+}
+/* RESPONSIVE */
+@media (min-width: 1230px) {...}
+
+@media (min-width: 1022px) {...}
+ 
+@media (max-width: 1021px) {...}
+
+@media (min-width: 796px) {
+	.nav>li>a {
+		padding: 0 5%;
+	}
+	div.navbar-collapse > ul > li {
+		width: 25%;
+		float: left;
+	} 
+	div.main-header { 
+		width: ;
+	}
+	div.navbar-collapse > ul { 
+		width: 80%;
+		height: 70px;
+	}
+	div.navbar-collapse > ul > li { 
+	}
+	.copyright-block .right {
+		text-align: center;
+	}
+	div.navbar-collapse > ul > li > a {
+		padding-top: 14%;
+	}
+	.navbar-nav .open .dropdown-menu>li>a:hover{
+		background-color: #333;
+	}
+	div.client-logo > .overlay-client > a > img {
+		width: 100%;
+	}
+}
+@media (min-width: 798px) {
+	.navbar-nav.navbar-right:last-child {
+		margin-right: 0px;
+	}
+}
+@media (max-width: 1200px){
+	div.navbar-collapse > ul > li > a {
+		padding-top: 10%;
+	}
+	div.container > .center-1 > .content1 > h1 {
+		padding-bottom: 30%;
+	}
+}
+@media (max-width: 620px){
+	div.container > .center-1 > .content1 > h1 {
+		padding-bottom: 45%;
+	}
+}
+@media (max-width: 400px){
+	.content1 {
+		padding-top: 40%;
+	}
+}
+@media (min-width: 1200px){
+	div.navbar-collapse > ul > li > a {
+		padding-top: 9%;
+	}
+}
+@media (max-width: 900px){
+	div.navbar-collapse > ul > li > a {
+		padding-top: 10%;
+	}
+}
+@media (max-width: 796px){
+	div.container-fluid{
+		padding-left: 0px;
+	}
+	div.container-fluid>.navbar-collapse {
+		margin-left: 0px;
+	}
+	div#logo { 
+		margin-left: 10px;
+	}
+	div.navbar-collapse > ul > li > a {
+		padding-top: 2%;
+	}
+	div.panel {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+	
+@media (max-width: 598px) {...}
+
+@media (max-width: 510px) {
+	
+}
+@media (max-width: 798px){
+}
+
+@media (min-width: 798px) and (max-width: 1021px) {...}
+
+@media (min-width: 1022px) and (max-width: 1229px) {...}
+
+figcaption > p {
+	padding-top: 0px;
+}
+.container > .center-1 > .content1 > h1 {
+	padding-bottom: 20%;
+}
+#jobs-container {
+	height: 100%;
+}
+#logo {
+	display: block;
+}
+#mobnav {
+	height: 70px;
+}
+.navbar-toggle {
+	margin-top: 23px;
+	margin-right: 10px;
+	padding: 0px;
+}
+.navbar-toggle .icon-bar {
+	background-color: #FFF;
+}
+.container-fluid {
+	background-color: #333333;
+	position: relative;
+	z-index: 1;
+}
+li.open > a {
+	background-color: #333333
+}
+li.open > ul {
+	width: 100%;
+	height: auto;
+	background-color: #333333;
+	color: #FFF;
+}
+li.open > ul > li {
+	text-transform: uppercase;
+	height: 42px;
+}
+li.open > ul > li > a {
+	color: #FFF;
+	height: 100%;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 45px;
+}
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+	background-color: #000;
+}
+ul.dropdown-menu {
+	border-radius: 0;
+	border: none;
+	padding: 0;
+	background-color: #333;
+}
+ul.dropdown-menu > li > a:hover {
+	background-color: #000;
+	color: #FFF;
+}
+ul.dropdown-menu > li > a:active {
+	border: none;
+}
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+	border: none;
+}
+li.open { 
+	background-color: black;
+}
+.case-study-block-inner figure {
+	height: 310px;
+}
+#more-case-studies {
+	height: 110px;
+}
+#jobs {
+}
+body img {
+	margin-top: 0px;
+}
+.navbar-collapse {
+	background-color: transparent;
+	width: 100%;
+}
+.dropdown-menu  {
+	width: 100%;
+	margin-left: -75%;
+}
+.navbar-nav .open .dropdown-menu>li>a {
+	padding-top: 1%;
+	padding-left: 45%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+}
+@media (max-width: 850px){
+	div.row > div.panel-default > div.panel-body {
+		width: 100%;
+	}
+}
+@media (min-width: 798px){
+	.navbar-nav .open .dropdown-menu>li>a{
+		padding-left: 8%;
+		padding-top: 8%;
+	}
+	.navbar-nav .open .dropdown-menu > li > a:hover{
+		background-color: black;
+	}
+	li.open > ul > li {
+		height: 65px;
+	}
+
+}
+@media (min-width: 815px){
+
+}
+div.container-fluid > .navbar-header {
+	margin-right: 0px;
+}
+div#window {
+	border: solid 2px #000;
+}
+.nav>li>a:hover, .nav>li>a:focus{
+	background-color: #333;
+	outline-width: 0px;
+}
+.navbar-nav .open .dropdown-menu>li>a:hover{
+	border-bottom: 5px solid #FFF;
+}
+.active {
+    color: #fff !important;
+    text-decoration: underline !important;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.fixed {
+	position: fixed;
+	z-index: 20;
+	width: 100%;
+}
+#client-block-18 {
+	width: 100%;
+}
+div#client-block-18 > div#client-logo > div.overlay-client > .col-sm-6 > a > img {
+	width: 100%;
+}
+div.client-logo > .overlay-client > a > img {
+	height: 100%;
+	width: 25%;
+}
+div#blogs-block-19 h1.text-center{
+	color: #FFF;
+}
+
+@media (min-width: 400px){
+}
+div.effect-logo > img#Logo {
+	height: 100%;
+	width: 100%;
+}
+div#case-studies > div#case-studies-container {
+	padding-left: 0px;
+}
+figure.effect-ruby img.effect-bg-img {
+	margin-top: 16px;
+}
+h2.effect-logo {
+	height: 100px;
+	width: 200px;
+	margin-top: 10px;
+}
+div#case-study-block-15 > figure > figcaption > h2#maggio {
+	height: 70px;
+	margin-left: 70px;
+}
+img.client-block-18 {
+	width: 100%;
+}
+img#maggio {
+	height: 100px;
+	width: 100px;
+	margin-left: 60px;
+}
+/* Mobile Phone size*/
+@media (min-width: 400px){
+	#more-cases-studies > .container > .row {
+		font-size: 14px;
+		height: 100%;
+	}
+	.case-study-block-inner figure figcaption p {
+		margin-top: 0px;
+	}
+	.case-study-block-inner figure {
+		height: 150px;
+	}
+	h2.cta-btns.text-center {
+		margin-top: -30px;
+		margin-bottom: 68px;
+		font-size: 8px;
+	}
+	#locations > #locations-container > .row > .col-xs-12 > h2 {
+		font-size: 35px;
+	}
+
+	/* customise navbar */
+	div.maincontent, div.navbar-header, div#main-header{
+		height: 37px;
+	}
+	div.container-fluid{
+		height: auto;
+	}
+	div#logo {
+		margin-top: -10px;
+	}
+	div#logo > a > img {
+		height: 25px;
+		width: 55px;
+	}
+	.navbar-toggle {
+		margin-top: 7px;
+	}
+	/* Adjust text */
+	div.container > .center-1 > .content1 > h1 {
+		font-size: 23px;
+	}
+	.center-1 > div > p > a {
+		font-size: 13px;
+	}
+	#intro-container > .row > .content2 > p, .content-block p, div.address p {
+		font-size: 11px;
+	}
+	.case-study-block-inner figure {
+		height: 112px;
+	}
+
+	h2.effect-logo > img.img-responsive, img#maggio {
+		margin-top: -4px;
+		margin-left: 77px;
+		margin-bottom: -10px;
+	}
+	img#maggio {
+		height: 50px;
+		width: 50px;
+	}
+	img#Logo {
+		width: 150px;
+		height: 40px;
+		margin-left: 40px;
+	}
+	div#logo {
+		height: 0px;
+	}
+	#jobs-intro {
+		height: 280px;
+	}
+}
+	.navbar-header {
+	display: none;
+	}
+	noscript > a > img {
+		margin-left: 43%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	noscript > div#fullpage > nav > header#main-header{
+		margin-top: -20px;
+	}
+
+	/* no javascript */
+	h1.block {
+		display: block;
+		background-color: #333;
+		color: #FFF;
+	}
+

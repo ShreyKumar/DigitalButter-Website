@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% if entry.heading is defined %}{{ entry.heading }} - {% endif %}{{ siteName }}</title>
+		<link rel="home" href="{{ siteUrl }}" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href="fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/bootstrap-3.1.1.min.css" rel="stylesheet">
+		<link href="css/digibutt.css" rel="stylesheet">
+		<link href="css/case-study.css" rel="stylesheet">
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+		<link href="css/custom.css" rel="stylesheet">
+		<link href="css/style5.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv-3.7.0.js"></script>
+			<script src="js/respond-1.4.2.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+						
+		<header id="main-header">
+			<div class="container">
+				<div class="row">
+					<div id="logo" class="col-sm-2">
+						<a href="{{ siteUrl }}">
+							
+							<img src="img/logo.png" alt="" />
+
+
+						</a>
+					</div>
+					<div class="col-sm-10">
+					
+						<div class="navbar navbar-right navbar-default" role="navigation">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle left" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+						
+							<div class="navbar-collapse collapse">
+								<ul class="nav navbar-nav">
+									{% for block in entry.longFormContent %}
+		    							{% switch block.type %}
+		        							{% case 'contentPanel' %}
+		        								{% if block.navbarName != '' %}
+		        								<li class="anchor-{{ block.contentId }}"><a
+		        									{% if block.contentId == 'contact' %}
+		        										id="trigger-overlay" 
+		        									{% endif %}
+
+		        								 href="#{{ block.contentId }}">{{ block.navbarName }}</a></li>
+		        								
+		        								{% endif %}
+		        						{% endswitch %}
+		        					{% endfor %}
+								</ul>
+							</div>
+						</div>
+					
+					</div>
+					
+					
+				</div><!-- 
+				<div class="row">
+					<div class="col-md-4">
+						<div class="split-nav-logo-mobile"></div>
+					</div>
+				</div> -->
+			</div>
+		</header>
+
+		{% for block in entry.longFormContent %}
+
+		    {% switch block.type %}
+
+		        {% case 'singleSlider' %}
+		        	{% for image in block.backgroundImage %}
+		            <div class="content-block slider-block" data-background-url="{{ image.getUrl() }}">
+		            	<div class="container">
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<h1>{{ block.slideText }}</h1>
+									<p class="cta-btns text-center">
+									{{ block.slideButtons }}
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+		        {% case 'services-off' %}
+		        	
+		        	<div class="col-md-3 col-sm-6 service-block-inner" id="service-block-{{ block.sortOrder }}">
+						<a href="#">
+							<div class="overlay">        
+								<h3>{{ block.serviceName }}</h3>
+								{{ block.serviceDescription }}
+							</div>
+						</a>
+					</div>
+					
+				{% case 'contentPanel' %}		
+
+					{% set bg = "" %}
+					{% for image in block.contentBackground %}
+						{% set bg = image.getUrl() %}
+					{% endfor %}
+						
+					
+
+					{% if block.contentId == 'contact' %}
+					<div class="overlay-modal overlay overlay-scale">
+						<button type="button" class="overlay-close">Close</button>
+						<div class="content-block" id="{{ block.contentId }}">
+		        			<div class="container" id="{{ block.contentId }}-container">
+								{{ block.contentBody }}
+								
+								<div class="form col-sm-8 ">
+
+									<form class="form-horizontal">
+										<fieldset>
+
+										<!-- Form Name -->
+										
+
+										<!-- Text input-->
+										<div class="form-group">
+										  <label class="control-label col-sm-2 hidephone" for="email">Email *</label>
+										  <div class="col-sm-10">
+										    <input id="email" name="email" type="text" placeholder="Your email address" class="form-control" required="">
+										  </div>
+										</div>
+
+										<!-- Text input-->
+										<div class="form-group">
+										  <label class="control-label col-sm-2 hidephone" for="name">Name</label>
+										  <div class="col-sm-10">
+										    <input id="name" name="name" type="text" placeholder="Your Name" class="form-control">
+										    
+										  </div>
+										</div>
+
+										<!-- Text input-->
+										<div class="form-group">
+										  <label class="control-label col-sm-2 hidephone" for="compay">Company</label>
+										  <div class="col-sm-10">
+										    <input id="compay" name="compay" type="text" placeholder="Where you work" class="form-control">
+										    
+										  </div>
+										</div>
+
+										<!-- Text input-->
+										<div class="form-group">
+										  <label class="control-label col-sm-2 hidephone" for="phone">Phone</label>
+										  <div class="col-sm-10">
+										    <input id="phone" name="phone" type="text" placeholder="Your telephone number" class="form-control">
+										    
+										  </div>
+										</div>
+
+										<!-- Text input-->
+										<div class="form-group">
+										  <label class="control-label col-sm-2 hidephone" for="message">Message</label>
+										  <div class="col-sm-10">                     
+										    <textarea id="message" class="form-control" rows="3" name="message" placeholder="How can we help?"></textarea>
+										  </div>
+										</div>
+
+										<div class="form-group">
+										  <label class="control-label col-sm-2" for="singlebutton">&nbsp;</label>
+										  <div class="col-sm-10">
+										    <button id="submitbutton" type="submit" name="submitbutton" class="btn btn-cta">Submit</button>
+										  </div>
+										</div>
+
+										</fieldset>
+									</form>
+
+
+								</div>
+
+								<div class="col-sm-3 pull-right">
+								{% for innerblock in entry.longFormContent %}
+									{% switch innerblock.type %}
+										{% case 'locations' %}
+											{% for image in innerblock.locationImage %}
+											<div class="row">
+									        	<div class="location-block-inner-contact" id="location-block-{{ innerblock.sortOrder }}-contact">
+									        		<img src="{{ image.getUrl() }}" alt="Digital Butter Office: {{ innerblock.locationName }}" />
+										        	<h4>{{ innerblock.locationName }}</h4>
+										        	<div class="address">
+										        	{{ innerblock.locationAddress }}
+										        	</div>
+												</div>
+											</div>
+											{% endfor %} 
+								    {% endswitch %}   
+								{% endfor %} 
+								</div>
+							</div>
+						</div>
+					</div>
+					{% else %}
+
+					<div class="content-block" id="{{ block.contentId }}" data-background-url="{{ bg }}">
+		        		<div class="container" id="{{ block.contentId }}-container">
+							<div class="row">
+								<div class="col-xs-12 {{ block.contentClasses }}" >	
+									{{ block.contentBody }}
+									<div class="afters row">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+		        	</div>
+
+		        	{% endif %}
+
+		        {% case 'clientList' %}
+
+					
+		        	<div class="col-sm-3 col-xs-2 client-block-inner" id="client-block-{{ block.sortOrder }}">
+						<div class="client-logo">
+							<div class="overlay-client">        
+								{% if block.clientUrl != '' %}
+									<a href="{{ block.clientUrl }}">
+										{% for image in block.clientLogo %}
+						    				<img src="{{ image.getUrl() }}" alt="{{ block.clientName }}" />
+										{% endfor %}
+									</a>
+								{% else %}
+									{% for image in block.clientLogo %}
+					    				<img src="{{ image.getUrl() }}" alt="{{ block.clientName }}" />
+									{% endfor %}
+								{% endif %}
+								
+							</div>
+						</div>
+					</div>	
+
+		        {% case 'caseStudyLinks' %}
+		        	{% for image in block.caseStudyImage %}
+		        	<div class="case-study-block-inner" id="case-study-block-{{ block.sortOrder }}">
+			        	<figure class="effect-ruby">
+							<img class="effect-bg-img" src="{{ image.getUrl() }}" alt="{{ block.caseStudyTitle }}" />
+							<figcaption>
+								{% for caseStudyLogo in block.caseStudyLogo %}
+									<h2 class="effect-logo"><img class="img-responsive" src="{{ caseStudyLogo.getUrl() }}" alt="{{ block.caseStudyTitle }}" /></h2>
+
+								{% endfor %} 
+								{{ block.caseStudyIntro }}
+
+								<h2 class="cta-btns text-center">
+									<a class="btn-cta" target="_blank" href="{{ block.caseStudyUrl }}">View Case Study</a> 
+								</h2>
+							</figcaption>			
+						</figure>
+						
+					</div>
+					{% endfor %} 
+		        	
+					
+		        	
+		        {% case 'jobs' %}
+		        
+				<div class="col-xs-12 jobs-block-inner" id="jobs-block-{{ block.sortOrder }}">
+					<h3>{{ block.jobTitle }}</h3>
+					<h4>Location: {{ block.jobLocations }}</h4>
+					{{ block.jobDescription }}
+					<div class="btns">
+						<a class="btn-cta" href="{{ block.jobApplyUrl }}">{{ block.jobApplyText }}</a>
+					</div>
+				</div>
+					
+
+				{% case 'blogPost' %}
+					{% for image in block.postImage %}
+					<div class="content-block" id="blogs" data-background-url="{{ image.getUrl() }}">
+				        <div class="container blogs-container" >
+				        	<div class="row">
+								<div class="col-xs-12 blogs-block-inner" id="blogs-block-{{ block.sortOrder }}">
+									<p class="cta-btns text-center">
+										<a href="http://www.butter.com.hk/blog/" class="cta-btn-lg" target="_blank">THE LATEST FROM THE CHURN</a>
+									</p>
+									<h3 class="text-center">{{ block.postTitle }}</h3>
+									<div class="cta-btns text-center">
+										<a class="btn-cta" href="{{ block.postUrl }}">{{ block.postLinkText }}</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+
+				{% case 'locations' %}
+					{% for image in block.locationImage %}
+		        	<div class="col-sm-6 location-block-inner" id="location-block-{{ block.sortOrder }}">
+		        		<h6 class="time_now">
+		        		{{ 'now' | date("G:i, l", block.locationGmtOffset) }}
+		        		</h6>
+					
+						<figure class="effect-ruby">
+							<img class="effect-bg-img" src="{{ image.getUrl() }}" alt="{{ block.locationName }}" />
+							<figcaption>
+								<h2 class="effect-logo">{{ block.locationName }}</h2>
+							</figcaption>			
+						</figure>
+
+						<h4>Digital Butter {{ block.locationName }}</h4>
+			        	<div class="address">
+			        	{{ block.locationAddress }}
+			        	</div>
+					</div>
+					{% endfor %} 
+		    {% endswitch %}    
+
+		{% endfor %}
+
+		
+		<div class="copyright-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12 left">
+						&copy; {{ "now"|date("Y") }} Digital Butter
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		
+						
+								<!-- SCRIPTS -->
+		<script src="js/bootstrap-3.1.1.min.js"></script>
+		<script src="plugins/backstretch/backstretch-2.0.4.min.js"></script>
+		<script src="plugins/fancybox/fancybox-1.3.4.pack.js"></script>
+		<script src="plugins/match-height/match-height-0.5.1.min.js"></script>
+		<script src="plugins/validation/validation-2.2.min.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script src="js/lollies.min.js"></script>
+		<script src="js/custom.js"></script>
+	</body>
+</html>
+					

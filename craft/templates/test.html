@@ -1,0 +1,55 @@
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% if entry.heading is defined %}{{ entry.heading }} - {% endif %}{{ siteName }}</title>
+        <link rel="home" href="{{ siteUrl }}" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href="fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/bootstrap-3.1.1.min.css" rel="stylesheet">
+        <link href="css/digibutt.css" rel="stylesheet">
+        <link href="css/case-study.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+</head>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        //var offset = $("p").offset();
+        //var xpos = $("p").offset().left;
+        //alert(xpos);
+    });
+    </script>
+  <style>
+  p {
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid #666;
+    position: absolute;
+    top: 30px;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p>Hello</p><p></p>
+ 
+<script>
+var p = $( "p:first" );
+$( "p:last" ).text( "scrollTop:" + p.scrollTop() );
+</script>
+</body>
+<!-- SCRIPTS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="plugins/scrollplugin/vendors/jquery.easings.min.js"></script>
+        <script type="text/javascript" src="plugins/scrollplugin/vendors/jquery.slimscroll.min.js"></script>
+        <script type="text/javascript" src="plugins/scrollplugin/jquery.fullPage.js"></script>
+        <script src="js/bootstrap-3.1.1.min.js"></script>
+        <script src="plugins/backstretch/backstretch-2.0.4.min.js"></script>
+        <script src="plugins/fancybox/fancybox-1.3.4.pack.js"></script>
+        <script src="plugins/match-height/match-height-0.5.1.min.js"></script>
+        <script src="plugins/validation/validation-2.2.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="js/custom.js"></script>
